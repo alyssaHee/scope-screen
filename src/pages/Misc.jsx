@@ -14,7 +14,9 @@ const tabContent = {
       <h1 className="content-title">Outside of school</h1>
       <div className="project-image-container">
         <div className="link-box">
-                <p className="content-text" style={{ marginTop: '10px' }} >A collection of my projects and experiments with oscilloscopes.</p>
+                <p className="content-text" style={{ marginTop: '10px' }} >
+                  Outside of school, I enjoy playing volleyball, tennis, and spending time with my dog, Bailey. I love being outside and also enjoy exploring new technologies and working on personal projects in my free time.
+                </p>
             </div>
             <div className="link-box" style={{ marginRight: '20px' }}>
                 <img className="exp-image" src={vball} alt="Vball" />
