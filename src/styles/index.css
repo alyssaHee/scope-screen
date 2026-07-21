@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox legacy IE/Edge */
+html,
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+  height: 100%;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: Millennium;
+  src: url('../src/assets/fonts/Millennium.ttf');
+}
+
+@font-face {
+  font-family: MSSansSerif;
+  src: url('../src/assets/fonts/MSSansSerif.ttf');
+}
+
+/* Text */
+h1 {
+  color: rgba(244, 236, 225, 0.775) !important;
+  font-size: 44px;
+  text-align: center;
+  font-weight: 700;
+  font-family: 'roboto mono', monospace;
+}
+
+h2 {
+  font-size: 12px;
+  font-weight: 100;
+  font-family: MSSansSerif, monospace;
+  text-align: center;
+  padding-top: 2px;
+  letter-spacing: 0.5px;
+  color: rgb(226, 226, 226) !important;
+}
+
+p {
+  color: rgba(244, 236, 225, 0.775) !important;
+  text-align: justify;
+  font-size: 15px;
+  font-family: MSSansSerif, monospace;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
