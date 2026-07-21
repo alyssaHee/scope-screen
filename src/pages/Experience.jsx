@@ -87,13 +87,13 @@ function Experience() {
             </div>
             <div className="nav-container-inner"
                 style={activeDiv === 'div1'? { backgroundColor: '#f0f0f07c' } : {} }>
-                <h2>Research</h2>
+                <h2>Power Electronics<br/>Research</h2>
             </div>
             <div className="nav-container-inner" style={activeDiv === 'div2'? { backgroundColor: '#f0f0f07c' } : {} }>
-                <h2>IEEE</h2>
+                <h2>IEEE UofT</h2>
             </div>
             <div className="nav-container-inner" style={activeDiv === 'div3'? { backgroundColor: '#f0f0f07c' } : {} }>
-                <h2>Frosh website</h2>
+                <h2>F!rosh Week<br/>website</h2>
             </div>
 
         </div>
