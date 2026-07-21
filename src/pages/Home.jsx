@@ -1,14 +1,12 @@
 import {
   useNavigate,
 } from 'react-router-dom'
-import { useState } from 'react'
 import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png'
 
 function Home() {
   const navigate = useNavigate()
-  const [isClicked, setIsClicked] = useState(false)
 
 
 
@@ -24,7 +22,7 @@ function Home() {
           <div className="about-container">
             <p>
               Hi! I am an Electrical and Computer engineering student at the University of Toronto.
-              <br /><br />I'm interested in power systems, power electronics, and control theory, particularly their applications in renewable energy integration and energy storage.
+              <br /><br />I'm interested in power systems, power electronics, and control theory, particularly their applications in renewable energy integration, energy storage, and autonomous systems.
               <br /><br />Welcome to my portfolio! Use the oscilloscope buttons on the right to navigate &#8594;
             </p>
         </div>
@@ -53,7 +51,7 @@ function Home() {
             Back
           </button>
 
-          <button onClick={() => navigate('/')} onClick={() => setIsClicked(true)}>
+          <button onClick={() => navigate('/')}>
             About
           </button>
 

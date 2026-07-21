@@ -29,7 +29,7 @@ const tabContent = {
                 </div>
             </div>
         </div>
-        <p className="content-text">This portfolio website showcases my work and technical interests. 
+        <p className="content-text">This portfolio website showcases my work and interests. 
             It is still a work in progress, and I am excited to refine it more. 
             I modeled the oscilloscope in Blender from scratch and learned a lot about topology, UV unwrapping, and texture baking. 
             This website was inspired by Henry Heffernan's and Jesse Zhou's portfolios.</p>
@@ -49,8 +49,7 @@ const tabContent = {
         </div>
         <p className="content-text">Sparky is a PCB that captures ESD events (shocks) and turns on an LED via a 555 timer in monostable mode.
             In the near future, I plan to model an enclosure for the PCB in the shape of an angler fish, which will be 3D printed. 
-            Size was a major consideration in the design of the PCB, as I want Sparky to be like a fridge magnet.
-            The PCB will be placed inside the enclosure, and the angler fish's "lure" will be the LED that turns on if a shock is detected.
+            Size was a major consideration in the design of the PCB, as I want Sparky to be a fridge magnet.
             I modelled the circuit in LTSpice, modelling the shock with the standard HBM and IEC 61000-4-2 ESD models.
         </p>
     </div>
@@ -73,10 +72,9 @@ const tabContent = {
             </div>
         </div>
         <p className="content-text">
-            Magic Flute is a project I worked on in my computer organization course. 
-            It is a digital implementation of a flute using an FPGA. I designed the flute keys in Fusion360 and 3D printed them. 
+            Magic Flute is a digital implementation of a flute using an FPGA. I designed the flute keys in Fusion360 and 3D printed them. 
             The keys act as switches that are read by the FPGA, which generates the corresponding sound using a NIOS V processor. 
-            A microphone is also used to detect if a user is blowing into the flute, and the sound is only generated if the user is blowing.
+            A microphone is also used to detect if a user is blowing into the flute, and sound is generated if the user is blowing.
         </p>
     </div>
   ),
@@ -118,7 +116,10 @@ const tabContent = {
             </div>
         </div>
         <p className="content-text">
-            Tomato Block is an iOS app I created that uses NFC tags to manage app time limits.</p>
+            Tomato Block is an iOS app I created that uses an NFC tag to manage app time limits.
+            It was inspired by the Brick which I kept seeing on Instagram. I made the app in Xcode using SwiftUI, and designed the layout in Figma. 
+            I also designed and printed a tomato enclosure for the NFC tag in Fusion360.
+        </p>
     </div>
   ),
 };

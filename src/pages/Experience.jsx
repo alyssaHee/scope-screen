@@ -20,34 +20,47 @@ const tabContent = {
                 <img className="exp-image" src={dab2} alt="DAB2" />
             </div>
             <div className="link-box">
-                <p className="content-text" style={{ marginTop: '10px' }} >A collection of my projects and experiments with oscilloscopes.</p>
+                <p className="content-text" style={{ marginTop: '10px' }} >
+                    This summer, I am working as a research assistant in the <a className="exp-link" href="https://home.cc.umanitoba.ca/~honm3/Riga_Lab/index.html" target="_blank" rel="noopener noreferrer">RIGA Lab</a> at the University of Manitoba.
+                    I am working alongside a PhD candidate to build a dual active bridge (DAB) converter for a solid state transformer. 
+                    So far, I have built a model of the DAB in PLECS and am in the process of assembling the prototype PCB. I am also working on converting the model to a controller hardware-in-the-loop simulation.
+                </p>
             </div>
         </div>
     </div>
   ),
   div2: (
     <div className="content-inner">
-      <h1 className="content-title">IEEE</h1>
+      <h1 className="content-title">IEEE University of Toronto Student Branch</h1>
       <div className="project-image-container">
         <div className="link-box">
-                <p className="content-text" style={{ marginTop: '10px' }} >A collection of my projects and experiments with oscilloscopes.</p>
+                <p className="content-text" style={{ marginTop: '10px' }} >
+                    As a tech team associate in my second year, I developed and co-lead two workshops on Arduino and Altium Designer. 
+                    I also worked on the hardware and PCB routing for a LoRa communication device for natural disasters as part of our annual project.
+                </p>
             </div>
             <div className="link-box" style={{ marginRight: '20px' }}>
                 <img className="exp-image" src={ieee} alt="IEEE" />
             </div>
-            
         </div>
+        <p className="content-text" id="ieee-description">This year, I am a co-director, where I am responsible for leading a team of 10+ associates and organizing technical workshops and events.
+                    Currently, I am leading a summer tutorial series on PCB design with an associate, where we are teaching members how to design their own PCBs using Altium Designer.</p>
     </div>
   ),
   div3: (
     <div className="content-inner">
-      <h1 className="content-title">Frosh Website</h1>
+      <h1 className="content-title">F!rosh Week Co-Webmaster</h1>
       <div className="project-image-container">
             <div className="link-box">
                 <img className="exp-image" src={frosh} alt="Frosh" />
             </div>
             <div className="link-box">
-                <p className="content-text" style={{ marginTop: '10px' }} >A collection of my projects and experiments with oscilloscopes.</p>
+                <p className="content-text" style={{ marginTop: '10px' }} >
+                    I helped redesign the 2025 orientation.skule.ca website with a team of five using React, CSS, and MongoDB to match the arcade theme.
+                    I also provided user support for 1,000+ registrants, troubleshooting account issues, answering inquiries, and assisting with
+                    website dependent events like sign-in and Skule™ Hunt deployment.
+
+                </p>
             </div>
         </div>
     </div>
