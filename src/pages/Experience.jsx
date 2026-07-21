@@ -22,7 +22,7 @@ const tabContent = {
             <div className="link-box">
                 <p className="content-text" style={{ marginTop: '10px' }} >
                     This summer, I am working as a research assistant in the <a className="exp-link" href="https://home.cc.umanitoba.ca/~honm3/Riga_Lab/index.html" target="_blank" rel="noopener noreferrer">RIGA Lab</a> at the University of Manitoba.
-                    I am working alongside a PhD candidate to build a dual active bridge (DAB) converter for a solid state transformer. 
+                    I am working alongside a PhD candidate to build a dual active bridge (DAB) converter for a solid state transformer.<br/><br/>
                     So far, I have built a model of the DAB in PLECS and am in the process of assembling the prototype PCB. I am also working on converting the model to a controller hardware-in-the-loop simulation.
                 </p>
             </div>
@@ -34,7 +34,7 @@ const tabContent = {
       <h1 className="content-title">IEEE University of Toronto Student Branch</h1>
       <div className="project-image-container">
         <div className="link-box">
-                <p className="content-text" style={{ marginTop: '10px' }} >
+                <p className="content-text" style={{ marginTop: '4px' }} >
                     As a tech team associate in my second year, I developed and co-lead two workshops on Arduino and Altium Designer. 
                     I also worked on the hardware and PCB routing for a LoRa communication device for natural disasters as part of our annual project.
                 </p>
@@ -43,8 +43,8 @@ const tabContent = {
                 <img className="exp-image" src={ieee} alt="IEEE" />
             </div>
         </div>
-        <p className="content-text" id="ieee-description">This year, I am a co-director, where I am responsible for leading a team of 10+ associates and organizing technical workshops and events.
-                    Currently, I am leading a summer tutorial series on PCB design with an associate, where we are teaching members how to design their own PCBs using Altium Designer.</p>
+        <p className="content-text" id="ieee-description">This year, I am a co-director leading a team of 10+ associates and organizing technical workshops and events.
+                    Currently, I am hosting a summer tutorial series on PCB design with another associate, where we are teaching members how to design their own PCBs.</p>
     </div>
   ),
   div3: (

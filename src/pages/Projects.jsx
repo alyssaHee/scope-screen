@@ -73,8 +73,9 @@ const tabContent = {
         </div>
         <p className="content-text">
             Magic Flute is a digital implementation of a flute using an FPGA. I designed the flute keys in Fusion360 and 3D printed them. 
-            The keys act as switches that are read by the FPGA, which generates the corresponding sound using a NIOS V processor. 
-            A microphone is also used to detect if a user is blowing into the flute, and sound is generated if the user is blowing.
+            The keys act as switches which generate the corresponding sound using a NIOS V processor. 
+            A microphone is also used to detect if a user is blowing into the flute, and sound is generated if they are.
+             My favourite song to play on the flute is Chariots of Fire.
         </p>
     </div>
   ),
@@ -116,7 +117,7 @@ const tabContent = {
             </div>
         </div>
         <p className="content-text">
-            Tomato Block is an iOS app I created that uses an NFC tag to manage app time limits.
+            Tomato Block is an iOS app that uses an NFC tag to block specific apps.
             It was inspired by the Brick which I kept seeing on Instagram. I made the app in Xcode using SwiftUI, and designed the layout in Figma. 
             I also designed and printed a tomato enclosure for the NFC tag in Fusion360.
         </p>
