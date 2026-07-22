@@ -1,6 +1,7 @@
 import {
   useNavigate,
 } from 'react-router-dom'
+import { useState } from 'react'
 import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png'
@@ -8,14 +9,20 @@ import resume from '../assets/pdfs/AlyssaHee-resume.pdf'
 
 function Home() {
   const navigate = useNavigate()
+  const [ishideBtn, setHideBtn] = useState(() => {
+    const saved = sessionStorage.getItem('isButtonHidden');
+    return saved === 'true'; // Converts string 'true' to boolean true
+  });
 
-
+  const handleHide = () => {
+      setHideBtn(true)
+      sessionStorage.setItem('isButtonHidden', 'true');
+  }
 
   return (
     <>
       <div className="screen-container">
-        
-
+         {!ishideBtn && (<button className={ishideBtn ? 'hide' : 'click-me-btn'} onClick={() => handleHide()}>Click me</button>)}
         <div className="content-container">
           <div className="title-container">
             <h1>Alyssa Hee</h1>

@@ -7,7 +7,7 @@
     width: 680px;
     height: 420px;
     z-index: 10;
-    pointer-events: auto !important;
+    pointer-events: none !important;
 
 }
 
@@ -19,7 +19,7 @@
     width: 550px;
     height: 420px;
     z-index: 10;
-    pointer-events: auto !important;
+    pointer-events: none !important;
     background-image: url("../assets/bg.png");
     padding: 0px 24px;
     align-items: center;
@@ -68,10 +68,12 @@
     margin-top: 36px;
     margin-bottom: 16px;
     width: 100%;
+    pointer-events: none !important;
 }
 
 .about-container {
     padding: 8px 16px;
+    pointer-events: none !important;
 }
 
 /* Buttons */
@@ -99,6 +101,7 @@
 button,
 .button {
     cursor: pointer;
+    pointer-events: all;
     padding: 8px;
     margin: 13px 6px;
     height: 29px;
@@ -113,6 +116,7 @@ button,
 
 #back-button {
     cursor: pointer;
+    pointer-events: all;
     padding: 8px;
     margin: 13px 0px;
     margin-left: 18px;
@@ -230,4 +234,38 @@ button:hover,
     text-decoration: underline;
     font-size: 12px;
     font-family: MSSansSerif, monospace;
+}
+
+.hide {
+    display: none;
+    opacity: 0;
+    transition: opacity 2s ease-in-out, display 2s ease-in-out allow-discrete;
+}
+
+.click-me-btn {
+    opacity: 1;
+    cursor: pointer;
+    padding: 1px;
+    font-size: 120px;
+    position: absolute;
+    top: -14px;
+    left: -4px;
+    width: 680px;
+    height: 422px;
+    background-color: #0f1514;
+    background-image: url("../assets/bg1.png");
+    background-size: cover;
+    color: #afccae;
+    font-family: Millennium, monospace;
+    letter-spacing: 2px;
+    border: none;
+    z-index: 100;
+    pointer-events: auto !important;
+    transition: opacity 2s ease-in-out, display 2s ease-in-out allow-discrete;
+}
+
+.click-me-btn:hover {
+    background-color: #0f1514;
+    background-image: url("../assets/bg1.png");
+    color: #6e7f6e;
 }
