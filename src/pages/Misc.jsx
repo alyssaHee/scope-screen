@@ -19,7 +19,7 @@ const tabContent = {
                 </p>
             </div>
             <div className="link-box" style={{ marginRight: '20px' }}>
-                <img className="exp-image" src={vball} alt="Vball" />
+                <img className="content-image" src={vball} alt="Vball" />
             </div>
             
         </div>
@@ -52,7 +52,7 @@ function Misc() {
           </div>
           <div className="nav-container-inner"
           style={activeDiv === 'div1'? { backgroundColor: '#f0f0f07c' } : {} }>
-            <h2>Outside of school</h2> 
+            <h2>Outside</h2> 
           </div>
           <div className="nav-container-inner"
           style={activeDiv === 'div2'? { backgroundColor: '#f0f0f07c' } : {} }>

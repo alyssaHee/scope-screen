@@ -20,7 +20,7 @@ const tabContent = {
                 <img className="exp-image" src={dab2} alt="DAB2" />
             </div>
             <div className="link-box">
-                <p className="content-text" style={{ marginTop: '10px' }} >
+                <p className="content-text">
                     This summer, I am working as a research assistant in the <a className="exp-link" href="https://home.cc.umanitoba.ca/~honm3/Riga_Lab/index.html" target="_blank" rel="noopener noreferrer">RIGA Lab</a> at the University of Manitoba.
                     I am working alongside a PhD candidate to build a dual active bridge (DAB) converter for a solid state transformer.<br/><br/>
                     So far, I have built a model of the DAB in PLECS and am in the process of assembling the prototype PCB. I am also working on converting the model to a controller hardware-in-the-loop simulation.
@@ -87,13 +87,13 @@ function Experience() {
             </div>
             <div className="nav-container-inner"
                 style={activeDiv === 'div1'? { backgroundColor: '#f0f0f07c' } : {} }
-                style={{ paddingTop: '2px' }}>
+                style={{ paddingTop: '8px' }}>
                 <h2>Power<br/>Electronics<br/>Research</h2>
             </div>
             <div className="nav-container-inner" style={activeDiv === 'div2'? { backgroundColor: '#f0f0f07c' } : {} }>
                 <h2>IEEE UofT</h2>
             </div>
-            <div className="nav-container-inner" style={activeDiv === 'div3'? { backgroundColor: '#f0f0f07c' } : {} }>
+            <div className="nav-container-inner" style={activeDiv === 'div3'? { backgroundColor: '#f0f0f07c' } : {} } style={{ paddingTop: '24px' }}>
                 <h2>F!rosh Week<br/>website</h2>
             </div>
 

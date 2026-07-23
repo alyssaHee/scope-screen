@@ -5,12 +5,11 @@ import { useState } from 'react';
 import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png';
-import portfolio from '../assets/content/portfolio.png';
+import portfolio from '../assets/content/portfolio1.png';
 import flute from '../assets/content/flute.png';
 import minicraft from '../assets/content/minicraft.png';
 import tomato from '../assets/content/tomato.png';
 import sparky from '../assets/content/sparky.png';
-
 import fluteReport from '../assets/pdfs/magic-flute.pdf';
 import minicraftReport from '../assets/pdfs/minicraft-slides.pdf';
 
@@ -156,7 +155,7 @@ function Projects() {
             <div className="nav-container-inner" style={activeDiv === 'div4'? { backgroundColor: '#f0f0f07c' } : {} }>
                 <h2>Minicraft</h2>
             </div>
-            <div className="nav-container-inner" style={activeDiv === 'div5'? { backgroundColor: '#f0f0f07c' } : {} }>
+            <div className="nav-container-inner" style={activeDiv === 'div5'? { backgroundColor: '#f0f0f07c' } : {} } style={{ paddingTop: '24px' }}>
                 <h2>Tomato Block<br />iOS app</h2>
             </div>
         </div>

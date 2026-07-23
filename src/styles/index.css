@@ -37,13 +37,13 @@ body {
 
 @font-face {
   font-family: MSSansSerif;
-  src: url('../assets1/fonts/MSSansSerif.ttf');
+  src: url('../assets/fonts/MSSansSerif.ttf');
 }
 
 /* Text */
 h1 {
   color: rgba(244, 236, 225, 0.775) !important;
-  font-size: 44px;
+  font-size: 88px;
   text-align: center;
   font-weight: 700;
   font-family: 'roboto mono', monospace;
@@ -51,7 +51,7 @@ h1 {
 }
 
 h2 {
-  font-size: 12px;
+  font-size: 28px;
   font-weight: 100;
   font-family: MSSansSerif, monospace;
   text-align: center;
@@ -63,8 +63,8 @@ h2 {
 p {
   color: rgba(244, 236, 225, 0.775) !important;
   text-align: justify;
-  font-size: 15px;
-  font-family: MSSansSerif, monospace;
-  letter-spacing: 0.5px;
-  line-height: 1.1;
+  font-size: 32px;
+  font-family: 'roboto mono', monospace;
+  letter-spacing: 0.2px;
+  line-height: 1.05;
 }
