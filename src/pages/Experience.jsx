@@ -86,14 +86,15 @@ function Experience() {
                 <img id="logo" src={logo} alt="Logo" />
             </div>
             <div className="nav-container-inner"
-                style={activeDiv === 'div1'? { backgroundColor: '#f0f0f07c' } : {} }
-                style={{ paddingTop: '8px' }}>
+                style={{paddingTop: '8px',
+                    backgroundColor: activeDiv === 'div1' ? '#f0f0f07c' : '' }}>
                 <h2>Power<br/>Electronics<br/>Research</h2>
             </div>
             <div className="nav-container-inner" style={activeDiv === 'div2'? { backgroundColor: '#f0f0f07c' } : {} }>
                 <h2>IEEE UofT</h2>
             </div>
-            <div className="nav-container-inner" style={activeDiv === 'div3'? { backgroundColor: '#f0f0f07c' } : {} } style={{ paddingTop: '24px' }}>
+            <div className="nav-container-inner" style={{paddingTop: '24px',
+                    backgroundColor: activeDiv === 'div3' ? '#f0f0f07c' : '' }}>
                 <h2>F!rosh Week<br/>website</h2>
             </div>
 

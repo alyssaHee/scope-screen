@@ -155,7 +155,8 @@ function Projects() {
             <div className="nav-container-inner" style={activeDiv === 'div4'? { backgroundColor: '#f0f0f07c' } : {} }>
                 <h2>Minicraft</h2>
             </div>
-            <div className="nav-container-inner" style={activeDiv === 'div5'? { backgroundColor: '#f0f0f07c' } : {} } style={{ paddingTop: '24px' }}>
+            <div className="nav-container-inner" style={{paddingTop: '24px',
+                    backgroundColor: activeDiv === 'div5' ? '#f0f0f07c' : '' }}>
                 <h2>Tomato Block<br />iOS app</h2>
             </div>
         </div>
