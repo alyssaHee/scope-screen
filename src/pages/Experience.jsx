@@ -88,14 +88,17 @@ function Experience() {
             <div className="nav-container-inner"
                 style={{paddingTop: '8px',
                     backgroundColor: activeDiv === 'div1' ? '#f0f0f07c' : '' }}>
-                <h2>Power<br/>Electronics<br/>Research</h2>
+                <h2>Power</h2>
+                <h2>Electronics</h2>
+                <h2>Research</h2>
             </div>
             <div className="nav-container-inner" style={activeDiv === 'div2'? { backgroundColor: '#f0f0f07c' } : {} }>
                 <h2>IEEE UofT</h2>
             </div>
-            <div className="nav-container-inner" style={{paddingTop: '24px',
+            <div className="nav-container-inner" style={{
                     backgroundColor: activeDiv === 'div3' ? '#f0f0f07c' : '' }}>
-                <h2>F!rosh Week<br/>website</h2>
+                <h2>F!rosh Week</h2>
+                <h2>co-Webmaster</h2>
             </div>
 
         </div>
