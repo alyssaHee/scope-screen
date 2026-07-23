@@ -157,7 +157,7 @@ function Projects() {
             </div>
             <div className="nav-container-inner" style={{
                     backgroundColor: activeDiv === 'div5' ? '#f0f0f07c' : '' }}>
-                <h2>Tomato Block<br />iOS app</h2>
+                <h2>Tomato Block</h2>
             </div>
         </div>
       </div>
