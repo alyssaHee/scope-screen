@@ -31,7 +31,7 @@ const tabContent = {
         <p className="content-text">This portfolio website showcases my work and interests. 
             It is still a work in progress, and I am excited to refine it more. 
             I modeled the oscilloscope in Blender from scratch and learned a lot about topology, UV unwrapping, and texture baking. 
-            This website was inspired by Henry Heffernan's and Jesse Zhou's portfolios.</p>
+            This website was inspired by Henry Heffernan's and Jesse Zhou's portfolios. <i>LinkedIn and mail icons designed by Magnific from Flaticon.</i></p>
     </div>
   ),
   div2: (
