@@ -230,6 +230,7 @@ button:hover,
     margin-bottom: 16px;
     font-size: 28px;
     font-family: MSSansSerif, monospace;
+    pointer-events: all !important;
 }
 
 .exp-link {
