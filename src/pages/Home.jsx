@@ -5,7 +5,6 @@ import { useState } from 'react'
 import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png'
-import resume from '../assets/pdfs/AlyssaHee-resume.pdf'
 
 function Home() {
   const navigate = useNavigate()
@@ -49,9 +48,6 @@ function Home() {
             <h2>Projects</h2>
           </div>
           <div className="nav-container-inner">
-            <h2>Resume</h2>
-          </div>
-          <div className="nav-container-inner">
             <h2>Misc.</h2>
           </div>
         </div>
@@ -72,10 +68,6 @@ function Home() {
 
           <button onClick={() => navigate('/projects')}>
             Projects
-          </button>
-
-          <button onClick={() => { window.open(resume, '_blank'); }}>
-            Resume
           </button>
 
           <button onClick={() => navigate('/misc')}>
