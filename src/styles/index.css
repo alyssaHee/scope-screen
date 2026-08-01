@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  pointer-events: none;
 }
 
 /* Hide scrollbar for Chrome, Safari, Edge */
@@ -18,7 +17,6 @@ body {
   scrollbar-width: none;
   overflow: hidden;
   height: 100%;
-  pointer-events: none;
 }
 
 :root {
