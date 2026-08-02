@@ -6,6 +6,11 @@ import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png'
 
+const allowedOrigins = new Set([
+  window.location.origin,
+  'https://alyssahee.vercel.app',
+])
+
 function Home() {
   const navigate = useNavigate()
   const [ishideBtn, setHideBtn] = useState(() => {
@@ -22,7 +27,7 @@ function Home() {
 
   useEffect(() => {
     const handleMessage = (event) => {
-      if (event.origin !== 'https://alyssahee.vercel.app') return;
+      if (!allowedOrigins.has(event.origin)) return;
 
       if (event.data && event.data.type === 'device-info') {
         setIsParentMobile(event.data.isMobile);
@@ -30,6 +35,11 @@ function Home() {
     };
 
     window.addEventListener('message', handleMessage);
+
+    if (window.parent !== window) {
+      window.parent.postMessage({ type: 'request-device-info' }, '*');
+    }
+
     return () => window.removeEventListener('message', handleMessage);
   }, []);
 
