@@ -76,7 +76,7 @@
 }
 
 .contact-links-mobile {
-    display: none;
+    display: flex;
     flex-direction: row;
     align-items: center;
     font-family: 'roboto mono', monospace;
@@ -90,12 +90,6 @@
 
 .contact-link {
     color: #719dc4;
-}
-
-@media (max-width: 932px) and (orientation: landscape) and (pointer: coarse) {
-    .contact-links-mobile {
-        display: flex !important;
-    }
 }
 
 /* Buttons */
