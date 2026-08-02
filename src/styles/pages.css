@@ -75,6 +75,29 @@
     pointer-events: none !important;
 }
 
+.contact-links-mobile {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'roboto mono', monospace;
+    font-size: 32px;
+    justify-content: center;
+    gap: 60px;
+    padding-right: 12px;
+    margin: 20px 0;
+    pointer-events: all !important;
+}
+
+.contact-link {
+    color: #719dc4;
+}
+
+@media (max-width: 932px) and (orientation: landscape) and (pointer: coarse) {
+    .contact-links-mobile {
+        display: flex !important;
+    }
+}
+
 /* Buttons */
 .button-container-outer {
     display: block;
@@ -130,11 +153,15 @@ button,
     box-shadow: none !important;
 }
 
-button:hover,
-.button:hover {
-    background-color: rgba(239, 230, 221, 0.419);
-    transition: background-color 0.4s ease;
+@media (hover: hover) {
+
+    button:hover,
+    .button:hover {
+        background-color: rgba(239, 230, 221, 0.419);
+        transition: background-color 0.4s ease;
+    }
 }
+
 
 #logo {
     width: 160px;

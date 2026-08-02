@@ -1,7 +1,7 @@
 import {
   useNavigate,
 } from 'react-router-dom'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png'
@@ -18,6 +18,21 @@ function Home() {
       sessionStorage.setItem('isButtonHidden', 'true');
   }
 
+  const [isParentMobile, setIsParentMobile] = useState(false);
+
+  useEffect(() => {
+    const handleMessage = (event) => {
+      if (event.origin !== 'https://alyssahee.vercel.app') return;
+
+      if (event.data && event.data.type === 'device-info') {
+        setIsParentMobile(event.data.isMobile);
+      }
+    };
+
+    window.addEventListener('message', handleMessage);
+    return () => window.removeEventListener('message', handleMessage);
+  }, []);
+
   return (
     <>
       <div className="screen-container">
@@ -25,6 +40,11 @@ function Home() {
         <div className="content-container">
           <div className="title-container">
             <h1>Alyssa Hee</h1>
+          </div>
+          <div className={isParentMobile ? 'contact-links-mobile' : 'hide'}>
+            <a className="contact-link" href="https://www.linkedin.com/in/alyssa-hee" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a className="contact-link" href="https://github.com/alyssaHee" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a className="contact-link" href="mailto:alyssa.hee@mail.utoronto.ca" target="_blank" rel="noopener noreferrer">Email</a>
           </div>
           <div className="about-container">
             <p>
@@ -73,7 +93,6 @@ function Home() {
           <button onClick={() => navigate('/misc')}>
             Misc.
           </button>
-
         </div>
       </div>
     </>
