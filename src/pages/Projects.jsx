@@ -71,8 +71,8 @@ const tabContent = {
         <p className="content-text">
             Magic Flute is a digital implementation of a flute using an FPGA. I designed and 3D printed the flute keys which  
             act as switches to generate the corresponding sound using a NIOS V processor. 
-            A microphone is also used to detect if a user is blowing into the flute, and generates sound if they are.
-             My favourite song to play on the flute is Chariots of Fire.
+            A microphone is also used to detect if a user is blowing into the flute, and generates sound if they are. 
+            My favourite song to play on the flute is Chariots of Fire.
         </p>
     </div>
   ),

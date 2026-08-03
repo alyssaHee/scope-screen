@@ -58,7 +58,7 @@ function Home() {
           </div>
           <div className="about-container">
             <p>
-              Hi! I am an Electrical and Computer engineering student at the University of Toronto.
+              Hi! I am an electrical and computer engineering student at the University of Toronto.
               <br /><br />I'm interested in power systems, power electronics, and control theory, particularly their applications in renewable energy integration, energy storage, and autonomous systems.
               <br /><br />Welcome to my portfolio! Use the oscilloscope buttons on the right to navigate &#8594;
             </p>
