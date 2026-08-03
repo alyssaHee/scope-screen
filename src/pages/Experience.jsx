@@ -36,7 +36,7 @@ const tabContent = {
         <div className="link-box">
                 <p className="content-text" style={{ marginTop: '4px' }} >
                     As a tech team associate in my second year, I developed and co-lead two workshops on Arduino and Altium Designer. 
-                    I also worked on the hardware and PCB routing for a LoRa communication device for natural disasters as part of our annual project.
+                    I also worked on the hardware and PCB routing for a LoRa communication device as part of our annual project.
                 </p>
             </div>
             <div className="link-box" style={{ marginRight: '20px' }}>
@@ -59,7 +59,6 @@ const tabContent = {
                     I helped redesign the 2025 orientation.skule.ca website with a team of five using React, CSS, and MongoDB to match the arcade theme.
                     I also provided user support for 1,000+ registrants, troubleshooting account issues, answering inquiries, and assisting with
                     website dependent events like sign-in and Skule™ Hunt deployment.
-
                 </p>
             </div>
         </div>

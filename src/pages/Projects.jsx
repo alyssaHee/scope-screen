@@ -45,8 +45,7 @@ const tabContent = {
                 </div>
             </div>
         </div>
-        <p className="content-text">Sparky is a PCB that captures ESD events (shocks) and turns on an LED via a 555 timer in monostable mode.
-            In the near future, I plan to model an enclosure for the PCB in the shape of an angler fish, which will be 3D printed. 
+        <p className="content-text">Sparky is a PCB that captures ESD events (shocks) and turns on an LED via a 555 timer in monostable mode. 
             Size was a major consideration in the design of the PCB, as I want Sparky to be a fridge magnet.
             I modelled the circuit in LTSpice, modelling the shock with the standard HBM and IEC 61000-4-2 ESD models.
         </p>
@@ -70,9 +69,9 @@ const tabContent = {
             </div>
         </div>
         <p className="content-text">
-            Magic Flute is a digital implementation of a flute using an FPGA. I designed the flute keys in Fusion360 and 3D printed them. 
-            The keys act as switches which generate the corresponding sound using a NIOS V processor. 
-            A microphone is also used to detect if a user is blowing into the flute, and sound is generated if they are.
+            Magic Flute is a digital implementation of a flute using an FPGA. I designed and 3D printed the flute keys which  
+            act as switches to generate the corresponding sound using a NIOS V processor. 
+            A microphone is also used to detect if a user is blowing into the flute, and generates sound if they are.
              My favourite song to play on the flute is Chariots of Fire.
         </p>
     </div>
@@ -115,9 +114,9 @@ const tabContent = {
             </div>
         </div>
         <p className="content-text">
-            Tomato Block is an iOS app that uses an NFC tag to block specific apps.
-            It was inspired by the Brick which I kept seeing on Instagram. I made the app in Xcode using SwiftUI, and designed the layout in Figma. 
-            I also designed and printed a tomato enclosure for the NFC tag in Fusion360.
+            Tomato Block is an iOS app inspired by the Brick product that uses an NFC tag to block specific apps. 
+            I made the app with SwiftUI and designed the layout in Figma. 
+            I also designed and printed a tomato case for the NFC tag in Fusion360.
         </p>
     </div>
   ),
