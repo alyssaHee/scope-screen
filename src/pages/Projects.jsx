@@ -5,11 +5,11 @@ import { useState } from 'react';
 import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png';
-import portfolio from '../assets/content/portfolio1.png';
-import flute from '../assets/content/flute.png';
+import portfolio from '../assets/content/portfolio1.webp';
+import flute from '../assets/content/flute.webp';
 import minicraft from '../assets/content/minicraft.png';
 import tomato from '../assets/content/tomato.png';
-import sparky from '../assets/content/sparky.png';
+import sparky from '../assets/content/sparky1.png';
 import fluteReport from '../assets/pdfs/magic-flute.pdf';
 import minicraftReport from '../assets/pdfs/minicraft-slides.pdf';
 
@@ -30,14 +30,14 @@ const tabContent = {
         </div>
         <p className="content-text">This portfolio website showcases my work and interests. 
             I modeled the oscilloscope in Blender from scratch and learned a lot about topology, UV unwrapping, and texture baking. 
-            This website was inspired by Henry Heffernan's and Jesse Zhou's portfolios. <i>LinkedIn and mail icons designed by Magnific from Flaticon.</i></p>
+            This website was inspired by Henry Heffernan's and Andrew Woan's portfolios. <i>LinkedIn and mail icons designed by Magnific from Flaticon.</i></p>
     </div>
   ),
   div2: (
     <div className="content-inner">
       <h1 className="content-title">Sparky</h1>
       <div className="project-image-container">
-            <img className="content-image" src={sparky} alt="Sparky" />
+            <img className="content-image" src={sparky} alt="Sparky" style={{ width: 'auto', height: '480px' }} />
             <div className="link-box">
                 <div className="link-box-inner">
                     <span className="project-tag">LTSpice</span>

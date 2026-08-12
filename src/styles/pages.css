@@ -214,6 +214,7 @@ button,
 .project-image-container {
     display: flex;
     flex-direction: row;
+    gap: 10px;
 }
 
 .link-box {
@@ -298,3 +299,11 @@ button,
     background-image: url("../assets/bg1.png");
     color: #8ba18a;
 }
+
+/* .footer {
+    position: fixed;
+    color: #47504d !important;
+    bottom: 24px;
+    left: 332px;
+    font-size: 20px;
+} */

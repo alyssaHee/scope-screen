@@ -46,7 +46,7 @@ function Home() {
   return (
     <>
       <div className="screen-container">
-         {!ishideBtn && (<button className={`${isParentMobile ? 'hide' : ishideBtn ? 'hide' : 'click-me-btn'}`} onClick={() => handleHide()}>Click me</button>)}
+         {!ishideBtn && (<button className={`${isParentMobile ? 'hide' : ishideBtn ? 'hide' : 'click-me-btn'} ${ishideBtn ? 'hide' : 'click-me-btn'}`} onClick={() => handleHide()}>Click me</button>)}
         <div className="content-container">
           <div className="title-container">
             <h1>Alyssa Hee</h1>
@@ -62,7 +62,10 @@ function Home() {
               <br /><br />I'm interested in power systems, power electronics, and control theory, particularly their applications in renewable energy integration, energy storage, and autonomous systems.
               <br /><br />Welcome to my portfolio! Use the oscilloscope buttons on the right to navigate &#8594;
             </p>
-        </div>
+          </div>
+          {/* <footer>
+            <p className="footer">&copy; 2026 Alyssa Hee. All rights reserved.</p>
+          </footer> */}
         </div>
         <div className="nav-container">
           <div className="nav-container-inner-logo">
