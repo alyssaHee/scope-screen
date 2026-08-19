@@ -29,6 +29,12 @@ const Carousel = ({ slides }) => {
     setIsExpanded((prev) => !prev);
   };
 
+  const handleMediaClick = (event) => {
+    if (isParentMobile) return;
+    event.stopPropagation();
+    handleToggleExpand();
+  };
+
   return (
     <Swiper
       cssMode={true}
@@ -40,7 +46,6 @@ const Carousel = ({ slides }) => {
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       className={`mySwiper ${!isParentMobile && isExpanded ? 'expanded' : ''}`}
       onSlideChange={handleSlideChange}
-      onClick={handleToggleExpand}
       role={isParentMobile ? undefined : 'button'}
       tabIndex={isParentMobile ? undefined : 0}
       onKeyDown={(event) => {
@@ -60,11 +65,21 @@ const Carousel = ({ slides }) => {
               controlsList="nodownload noplaybackrate nofullscreen"
               disablePictureInPicture
               className="carousel-video"
+              onClick={(event) => {
+                if (event.target !== event.currentTarget) return;
+                event.stopPropagation();
+                handleMediaClick(event);
+              }}
             >
               <source src={slide.src} type="video/mp4" />
             </video>
           ) : (
-            <img src={slide.src} alt={slide.alt} className="carousel-media" />
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className="carousel-media"
+              onClick={handleMediaClick}
+            />
           )}
         </SwiperSlide>
       ))}

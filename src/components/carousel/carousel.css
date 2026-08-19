@@ -1,4 +1,5 @@
 .mySwiper {
+    user-select: none;
     position: relative;
     width: 640px;
     height: 380px;

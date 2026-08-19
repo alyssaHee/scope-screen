@@ -21,9 +21,10 @@ const tabContent = {
             </div>
             <div className="link-box">
                 <p className="content-text">
-                    This summer, I am working as a research assistant in the <a className="exp-link" href="https://home.cc.umanitoba.ca/~honm3/Riga_Lab/index.html" target="_blank" rel="noopener noreferrer">RIGA Lab</a> at the University of Manitoba.
-                    I am working alongside a PhD candidate to build a dual active bridge (DAB) converter for a solid state transformer.<br/><br/>
-                    So far, I have built a model of the DAB in PLECS and am in the process of assembling the prototype PCB. I am also working on converting the model to a controller hardware-in-the-loop simulation.
+                    This summer, I worked as a research assistant in the <a className="exp-link" href="https://home.cc.umanitoba.ca/~honm3/Riga_Lab/index.html" target="_blank" rel="noopener noreferrer">RIGA Lab</a> at the University of Manitoba.
+                    Alongside a PhD candidate, we built a dual active bridge (DAB) converter for a solid state transformer.<br/><br/>
+                    I worked on open- and closed-loop PLECS simulations, tuning the controller, and exploring phase-shift modulation, efficiency, and soft switching. I also ran Controller Hardware-in-the-Loop testing with an RT Box and TI DSP.
+                    On the hardware side, I assembled the prototype PCB, soldering 700+ components and debugging ICs during bring-up.
                 </p>
             </div>
         </div>
