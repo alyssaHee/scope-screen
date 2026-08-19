@@ -1,15 +1,11 @@
 import {
   useNavigate,
 } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png'
-
-const allowedOrigins = new Set([
-  window.location.origin,
-  'https://alyssahee.vercel.app',
-])
+import useIsParentMobile from '../components/isMobile.jsx'
 
 function Home() {
   const navigate = useNavigate()
@@ -18,36 +14,18 @@ function Home() {
     return saved === 'true'; // Converts string 'true' to boolean true
   });
 
+  const isParentMobile = useIsParentMobile();
+
   const handleHide = () => {
       setHideBtn(true)
       sessionStorage.setItem('isButtonHidden', 'true');
   }
 
-  const [isParentMobile, setIsParentMobile] = useState(false);
-
-  useEffect(() => {
-    const handleMessage = (event) => {
-      if (!allowedOrigins.has(event.origin)) return;
-
-      if (event.data && event.data.type === 'device-info') {
-        setIsParentMobile(event.data.isMobile);
-      }
-    };
-
-    window.addEventListener('message', handleMessage);
-
-    if (window.parent !== window) {
-      window.parent.postMessage({ type: 'request-device-info' }, '*');
-    }
-
-    return () => window.removeEventListener('message', handleMessage);
-  }, []);
-
   return (
     <>
       <div className="screen-container">
          {!ishideBtn && (<button className={`${isParentMobile ? 'hide' : ishideBtn ? 'hide' : 'click-me-btn'}`} onClick={() => handleHide()}>Click me</button>)}
-        <div className="content-container home-pwm">
+        <div className={isParentMobile ? 'content-container' : 'content-container  home-pwm'}>
           <div className="title-container">
             <h1>Alyssa Hee</h1>
           </div>

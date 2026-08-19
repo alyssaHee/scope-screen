@@ -8,11 +8,13 @@ import 'swiper/css/pagination';
 
 import '../../styles/pages.css';
 import './carousel.css';
+import useIsParentMobile from '../isMobile.jsx';
 
 // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 
 const Carousel = ({ slides }) => {
+  const isParentMobile = useIsParentMobile();
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleSlideChange = () => {
@@ -23,6 +25,7 @@ const Carousel = ({ slides }) => {
   };
 
   const handleToggleExpand = () => {
+    if (isParentMobile) return;
     setIsExpanded((prev) => !prev);
   };
 
@@ -35,12 +38,13 @@ const Carousel = ({ slides }) => {
       keyboard={true}
       loop={true}
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-      className={`mySwiper ${isExpanded ? 'expanded' : ''}`}
+      className={`mySwiper ${!isParentMobile && isExpanded ? 'expanded' : ''}`}
       onSlideChange={handleSlideChange}
       onClick={handleToggleExpand}
-      role="button"
-      tabIndex={0}
+      role={isParentMobile ? undefined : 'button'}
+      tabIndex={isParentMobile ? undefined : 0}
       onKeyDown={(event) => {
+        if (isParentMobile) return;
         if (event.key === 'Enter' || event.key === ' ') {
           event.preventDefault();
           handleToggleExpand();

@@ -4,6 +4,7 @@ import {
 import { useState } from 'react';
 import '../styles/pages.css'
 import '../styles/index.css'
+import useIsParentMobile from '../components/isMobile.jsx'
 import Carousel from '../components/carousel/carousel.jsx';
 
 import logo from '../assets/logo.png';
@@ -24,6 +25,8 @@ function Projects() {
   const [activeDiv, setActiveDiv] = useState('div1');
   const [expandedImage, setExpandedImage] = useState(null);
 
+  const isParentMobile = useIsParentMobile();
+
   const toggleExpandedImage = (imageKey) => {
     setExpandedImage((prev) => (prev === imageKey ? null : imageKey));
   };
@@ -38,7 +41,7 @@ function Projects() {
         <h1 className="content-title">Oscilloscope portfolio</h1>
         <div className="project-image-container">
           <img
-            className={expandedImage === 'portfolio' ? 'content-image-expanded' : 'content-image'}
+            className={isParentMobile ? ('content-image') : expandedImage === 'portfolio' ? 'content-image-expanded' : 'content-image'}
             src={portfolio}
             alt="Portfolio"
             style={{ marginLeft: '-20px' }}
@@ -132,7 +135,7 @@ function Projects() {
       <div className="content-inner">
         <h1 className="content-title">Tomato Block</h1>
         <div className="project-image-container">
-          <img className={expandedImage === 'tomato' ? 'content-image-expanded' : 'content-image'} 
+          <img className={isParentMobile ? ('content-image') : expandedImage === 'tomato' ? 'content-image-expanded' : 'content-image'} 
                src={tomato} 
                alt="Tomato Block" 
                onClick={() => toggleExpandedImage('tomato')} 
