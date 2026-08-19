@@ -6,7 +6,7 @@ import '../styles/pages.css'
 import '../styles/index.css'
 import logo from '../assets/logo.png';
 import dab1 from '../assets/content/dab1.png';
-import dab2 from '../assets/content/dab2.png';
+import dab2 from '../assets/content/dab.jpg';
 import ieee from '../assets/content/ieee.png';
 import frosh from '../assets/content/frosh.png';
 

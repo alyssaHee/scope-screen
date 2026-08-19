@@ -1,0 +1,98 @@
+.mySwiper {
+    position: relative;
+    width: 640px;
+    height: 380px;
+    flex: 1;
+    pointer-events: all !important;
+    overflow: hidden;
+    padding: 0 60px !important;
+    box-sizing: border-box;
+    border-radius: 12px;
+    z-index: 1;
+    margin-left: -40px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: width 0.35s ease, height 0.35s ease, max-width 0.35s ease, transform 0.35s ease;
+}
+
+.mySwiper.expanded {
+    width: 1030px;
+    height: 650px;
+    position: absolute;
+    top: 100px;
+    padding: 2px 40px !important;
+    background: #1a1713e6;
+    left: 80px;
+    z-index: 30;
+}
+
+.mySwiper .carousel-media,
+.mySwiper .carousel-video {
+    cursor: url('../../assets/cursors/expand.png'), auto;
+}
+
+.mySwiper.expanded .carousel-media,
+.mySwiper.expanded .carousel-video {
+    cursor: url('../../assets/cursors/minimize.png'), auto;
+}
+
+.mySwiper .swiper-wrapper,
+.mySwiper .swiper-slide {
+    height: 100%;
+    transition: none !important;
+}
+
+.mySwiper .swiper-slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    margin-bottom: 0;
+}
+
+.carousel-media {
+    width: 99%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    border: 3px solid rgba(153, 188, 219, 0.4);
+    overflow: hidden;
+    display: block;
+    pointer-events: all !important;
+}
+
+.carousel-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 3px solid rgba(153, 188, 219, 0.4);
+    display: block;
+    pointer-events: all !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    z-index: 20;
+    top: 50%;
+    width: 42px;
+    height: 42px;
+    color: #d5efefe0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+    cursor: pointer !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 18px;
+    font-weight: 700;
+}

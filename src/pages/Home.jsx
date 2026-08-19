@@ -47,7 +47,7 @@ function Home() {
     <>
       <div className="screen-container">
          {!ishideBtn && (<button className={`${isParentMobile ? 'hide' : ishideBtn ? 'hide' : 'click-me-btn'}`} onClick={() => handleHide()}>Click me</button>)}
-        <div className="content-container">
+        <div className="content-container home-pwm">
           <div className="title-container">
             <h1>Alyssa Hee</h1>
           </div>

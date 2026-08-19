@@ -4,133 +4,158 @@ import {
 import { useState } from 'react';
 import '../styles/pages.css'
 import '../styles/index.css'
+import Carousel from '../components/carousel/carousel.jsx';
+
 import logo from '../assets/logo.png';
 import portfolio from '../assets/content/portfolio1.webp';
 import flute from '../assets/content/flute.webp';
 import minicraft from '../assets/content/minicraft.png';
 import tomato from '../assets/content/tomato.png';
-import sparky from '../assets/content/sparky1.png';
+
+import sparky from '../assets/content/sparky2.png';
+import sparky2 from '../assets/content/sparky.png';
+
 import fluteReport from '../assets/pdfs/magic-flute.pdf';
+import flutevid from '../assets/content/flutevid.mp4';
 import minicraftReport from '../assets/pdfs/minicraft-slides.pdf';
 
-const tabContent = {
-  div1: (
-    <div className="content-inner" >
-        <h1 className="content-title">Oscilloscope portfolio</h1>
-        <div className="project-image-container">
-            <img className="content-image" src={portfolio} alt="Portfolio" />
-            <div className="link-box">
-                <div className="link-box-inner">
-                    <span className="project-tag">THREE.js</span>
-                    <span className="project-tag">React</span>
-                    <span className="project-tag">Blender</span>
-                    <span className="project-tag">Figma</span>
-                </div>
-            </div>
-        </div>
-        <p className="content-text">This portfolio website showcases my work and interests. 
-            I modeled the oscilloscope in Blender from scratch and learned a lot about topology, UV unwrapping, and texture baking. 
-            This website was inspired by Henry Heffernan's and Andrew Woan's portfolios. <i>LinkedIn and mail icons designed by Magnific from Flaticon.</i></p>
-    </div>
-  ),
-  div2: (
-    <div className="content-inner">
-      <h1 className="content-title">Sparky</h1>
-      <div className="project-image-container">
-            <img className="content-image" src={sparky} alt="Sparky" style={{ width: 'auto', height: '480px' }} />
-            <div className="link-box">
-                <div className="link-box-inner">
-                    <span className="project-tag">LTSpice</span>
-                    <span className="project-tag">Altium Designer</span>
-                </div>
-            </div>
-        </div>
-        <p className="content-text">Sparky is a PCB that captures ESD events (shocks) and turns on an LED via a 555 timer in monostable mode. 
-            Size was a major consideration in the design of the PCB, as I want Sparky to be a fridge magnet.
-            I modelled the circuit in LTSpice, modelling the shock with the standard HBM and IEC 61000-4-2 ESD models.
-        </p>
-    </div>
-  ),
-  div3: (
-    <div className="content-inner">
-      <h1 className="content-title">Magic Flute</h1>
-      <div className="project-image-container">
-            <img className="content-image" src={flute} alt="Flute" />
-            <div className="link-box">
-                <a className="project-link" href={fluteReport} target="_blank" rel="noopener noreferrer">
-                    Take a look
-                </a>
-                <div className="link-box-inner">
-                    <span className="project-tag">C</span>
-                    <span className="project-tag">FPGA</span>
-                    <span className="project-tag">NIOS V</span>
-                    <span className="project-tag">Fusion360</span>
-                </div>
-            </div>
-        </div>
-        <p className="content-text">
-            Magic Flute is a digital implementation of a flute using an FPGA. I designed and 3D printed the flute keys which  
-            act as switches to generate the corresponding sound using a NIOS V processor. 
-            A microphone is also used to detect if a user is blowing into the flute, and generates sound if they are. 
-            My favourite song to play on the flute is Chariots of Fire.
-        </p>
-    </div>
-  ),
-  div4: (
-    <div className="content-inner">
-      <h1 className="content-title">Minicraft</h1>
-      <div className="project-image-container">
-            <img className="content-image" src={minicraft} alt="Minicraft" />
-            <div className="link-box">
-                <a className="project-link" href={minicraftReport} target="_blank" rel="noopener noreferrer">
-                    Take a look
-                </a>
-                <div className="link-box-inner">
-                    <span className="project-tag">Verilog</span>
-                    <span className="project-tag">FPGA</span>
-                </div>
-            </div>
-        </div>
-        <p className="content-text">
-            Minicraft is a project I worked on in my digital systems course. It was built with Verilog on an FPGA, using MIF-initialized ROM for tile maps to support real-time
-            map updates. I created gameplay logic including inventory management, block placement, and debugged modular components in ModelSim before integration.
-        </p>
-    </div>
-  ),
-  div5: (
-    <div className="content-inner">
-      <h1 className="content-title">Tomato Block</h1>
-      <div className="project-image-container">
-            <img className="content-image" src={tomato} alt="Tomato Block" />
-            <div className="link-box">
-                <a className="project-link" href="https://apps.apple.com/ca/app/tomato-block/id6751349777" target="_blank" rel="noopener noreferrer">
-                    Take a look
-                </a>
-                <div className="link-box-inner">
-                    <span className="project-tag">SwiftUI</span>
-                    <span className="project-tag">Figma</span>
-                    <span className="project-tag">Fusion360</span>
-                </div>
-            </div>
-        </div>
-        <p className="content-text">
-            Tomato Block is an iOS app inspired by the Brick product that uses an NFC tag to block specific apps. 
-            I made the app with SwiftUI and designed the layout in Figma. 
-            I also designed and printed a tomato case for the NFC tag in Fusion360.
-        </p>
-    </div>
-  ),
-};
-
-
 function Projects() {
-  const navigate = useNavigate()
-  const [activeDiv, setActiveDiv] = useState('div1')
+  const navigate = useNavigate();
+  const [activeDiv, setActiveDiv] = useState('div1');
+  const [expandedImage, setExpandedImage] = useState(null);
+
+  const toggleExpandedImage = (imageKey) => {
+    setExpandedImage((prev) => (prev === imageKey ? null : imageKey));
+  };
 
   const handleButtonClick = (divId) => {
-    setActiveDiv(activeDiv === divId ? activeDiv : divId)
-  }
- 
+    setActiveDiv((current) => (current === divId ? current : divId));
+  };
+
+  const tabContent = {
+    div1: (
+      <div className="content-inner" >
+        <h1 className="content-title">Oscilloscope portfolio</h1>
+        <div className="project-image-container">
+          <img
+            className={expandedImage === 'portfolio' ? 'content-image-expanded' : 'content-image'}
+            src={portfolio}
+            alt="Portfolio"
+            style={{ marginLeft: '-20px' }}
+            onClick={() => toggleExpandedImage('portfolio')}
+          />
+          <div className="link-box">
+            <div className="link-box-inner">
+              <span className="project-tag">THREE.js</span>
+              <span className="project-tag">React</span>
+              <span className="project-tag">Blender</span>
+              <span className="project-tag">Figma</span>
+            </div>
+          </div>
+        </div>
+        <p className="content-text">This portfolio website showcases my work and interests.
+          I modeled the oscilloscope in Blender from scratch and learned a lot about topology, UV unwrapping, and texture baking.
+          This website was inspired by Henry Heffernan's and Andrew Woan's portfolios. <i>LinkedIn and mail icons designed by Magnific from Flaticon.</i></p>
+      </div>
+    ),
+    div2: (
+      <div className="content-inner">
+        <h1 className="content-title">Sparky</h1>
+        <div className="project-image-container">
+          <Carousel key="sparky" slides={[
+            { type: 'image', src: sparky2, alt: 'Sparky' },
+            { type: 'image', src: sparky, alt: 'Sparky 2' },
+          ]} />
+          <div className="link-box">
+            <div className="link-box-inner">
+              <span className="project-tag">LTSpice</span>
+              <span className="project-tag">Altium Designer</span>
+            </div>
+          </div>
+        </div>
+        <p className="content-text">Sparky is a PCB that captures ESD events (shocks) and turns on an LED via a 555 timer in monostable mode.
+          Size was a major consideration in the design of the PCB, as I want Sparky to be a fridge magnet.
+          I modelled the circuit in LTSpice, modelling the shock with the standard HBM and IEC 61000-4-2 ESD models.
+        </p>
+      </div>
+    ),
+    div3: (
+      <div className="content-inner">
+        <h1 className="content-title">Magic Flute</h1>
+        <div className="project-image-container">
+          <Carousel key="flute" slides={[
+            { type: 'image', src: flute, alt: 'Flute' },
+            { type: 'video', src: flutevid, alt: 'Flute Video' },
+          ]} />
+          <div className="link-box">
+            <a className="project-link" href={fluteReport} target="_blank" rel="noopener noreferrer">
+              Take a look
+            </a>
+            <div className="link-box-inner">
+              <span className="project-tag">C</span>
+              <span className="project-tag">FPGA</span>
+              <span className="project-tag">NIOS V</span>
+              <span className="project-tag">Fusion360</span>
+            </div>
+          </div>
+        </div>
+        <p className="content-text">
+          Magic Flute is a digital implementation of a flute using an FPGA. I designed and 3D printed the flute keys which
+          act as switches to generate the corresponding sound using a NIOS V processor.
+          A microphone is also used to detect if a user is blowing into the flute, and generates sound if they are.
+          My favourite song to play on the flute is Chariots of Fire.
+        </p>
+      </div>
+    ),
+    div4: (
+      <div className="content-inner">
+        <h1 className="content-title">Minicraft</h1>
+        <div className="project-image-container">
+          <img className="content-image" src={minicraft} alt="Minicraft" />
+          <div className="link-box">
+            <a className="project-link" href={minicraftReport} target="_blank" rel="noopener noreferrer">
+              Take a look
+            </a>
+            <div className="link-box-inner">
+              <span className="project-tag">Verilog</span>
+              <span className="project-tag">FPGA</span>
+            </div>
+          </div>
+        </div>
+        <p className="content-text">
+          Minicraft is a project I worked on in my digital systems course. It was built with Verilog on an FPGA, using MIF-initialized ROM for tile maps to support real-time
+          map updates. I created gameplay logic including inventory management, block placement, and debugged modular components in ModelSim before integration.
+        </p>
+      </div>
+    ),
+    div5: (
+      <div className="content-inner">
+        <h1 className="content-title">Tomato Block</h1>
+        <div className="project-image-container">
+          <img className={expandedImage === 'tomato' ? 'content-image-expanded' : 'content-image'} 
+               src={tomato} 
+               alt="Tomato Block" 
+               onClick={() => toggleExpandedImage('tomato')} 
+               style={{marginLeft: '-20px'}} />
+          <div className="link-box">
+            <a className="project-link" href="https://apps.apple.com/ca/app/tomato-block/id6751349777" target="_blank" rel="noopener noreferrer">
+              Take a look
+            </a>
+            <div className="link-box-inner">
+              <span className="project-tag">SwiftUI</span>
+              <span className="project-tag">Figma</span>
+              <span className="project-tag">Fusion360</span>
+            </div>
+          </div>
+        </div>
+        <p className="content-text">
+          Tomato Block is an iOS app inspired by the Brick product that uses an NFC tag to block specific apps.
+          I made the app with SwiftUI and designed the layout in Figma.
+          I also designed and printed a tomato case for the NFC tag in Fusion360.
+        </p>
+      </div>
+    ),
+  };
   return (
     <>
       <div className="screen-container">
