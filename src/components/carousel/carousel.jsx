@@ -59,20 +59,22 @@ const Carousel = ({ slides }) => {
       {slides.map((slide, index) => (
         <SwiperSlide className="carousel-slide" key={index}>
           {slide.type === 'video' ? (
+            <div className="carousel-video-container">
             <video
               controls
               playsInline
               controlsList="nodownload noplaybackrate nofullscreen"
               disablePictureInPicture
               className="carousel-video"
-              onClick={(event) => {
-                if (event.target !== event.currentTarget) return;
-                event.stopPropagation();
-                handleMediaClick(event);
+              onDoubleClick={(event) => {
+                event.preventDefault();
+                handleToggleExpand();
               }}
             >
               <source src={slide.src} type="video/mp4" />
             </video>
+            <p style={{ display: isParentMobile ? 'none' : 'block', fontSize: '20px', textAlign: 'center' }}>Double click to expand/minimize</p>
+            </div>
           ) : (
             <img
               src={slide.src}

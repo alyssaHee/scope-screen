@@ -23,7 +23,7 @@ const tabContent = {
                 <p className="content-text">
                     This summer, I worked as a research assistant in the <a className="exp-link" href="https://home.cc.umanitoba.ca/~honm3/Riga_Lab/index.html" target="_blank" rel="noopener noreferrer">RIGA Lab</a> at the University of Manitoba.
                     Alongside a PhD candidate, we built a dual active bridge (DAB) converter for a solid state transformer.<br/><br/>
-                    I worked on open- and closed-loop PLECS simulations, tuning the controller, and exploring phase-shift modulation, efficiency, and soft switching. I also ran Controller Hardware-in-the-Loop testing with an RT Box and TI DSP.
+                    I worked on open- and closed-loop PLECS simulations, controller tuning, and exploring phase-shift modulation, soft switching, and losses. I also ran Controller Hardware-in-the-Loop testing with an RTBox and TI DSP.
                     On the hardware side, I assembled the prototype PCB, soldering 700+ components and debugging ICs during bring-up.
                 </p>
             </div>
