@@ -15,8 +15,8 @@ const tabContent = {
       <div className="project-image-container">
         <div className="link-box">
                 <p className="content-text" style={{ marginTop: '10px' }} >
-                  Outside of school, I enjoy playing volleyball, tennis, and spending time with my dog, Bailey. I am part of volleyball and tennis intramurals, and I am the women's director for the EAA.<br/><br/>
-                  I love being outside and also enjoy exploring new technologies and working on personal projects in my free time.
+                  Outside of school, I like gardening, playing volleyball, tennis, and spending time with my dog, Bailey. I am part of volleyball and tennis intramurals, and I am the women's director for the EAA.<br/><br/>
+                  I love being outside and enjoy exploring new technologies to bring my personal projects to life.
                 </p>
             </div>
             <div className="link-box" style={{ marginRight: '20px' }}>
