@@ -58,6 +58,7 @@ const tabContent = {
             <div className="link-box">
                 <p className="content-text" style={{ marginTop: '10px' }} >
                     I redesigned the 2025 orientation.skule.ca website with a team of five using React, CSS, and MongoDB to match the arcade theme.
+                    <br/><br/>
                     I also provided user support for 1,000+ registrants, troubleshooting account issues, answering inquiries, and assisting with
                     website dependent events like sign-in and Skule™ Hunt deployment.
                 </p>

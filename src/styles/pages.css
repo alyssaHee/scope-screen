@@ -172,7 +172,7 @@ button,
     font-size: 70px;
     font-weight: 700;
     font-family: 'roboto mono', monospace;
-    color: rgba(244, 236, 225, 0.775) !important;
+    color: rgb(187, 178, 165) !important;
     text-align: center;
     padding-top: 28px;
 }
