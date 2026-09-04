@@ -10,15 +10,14 @@ import Carousel from '../components/carousel/carousel.jsx';
 import logo from '../assets/logo.png';
 import portfolio from '../assets/content/portfolio1.webp';
 import flute from '../assets/content/flute.webp';
-import minicraft from '../assets/content/minicraft.png';
 import tomato from '../assets/content/tomato.png';
 
+import sparky1 from '../assets/content/sparky1.png';
 import sparky from '../assets/content/sparky2.png';
 import sparky2 from '../assets/content/sparky.png';
 
 import fluteReport from '../assets/pdfs/magic-flute.pdf';
 import flutevid from '../assets/content/flutevid.mp4';
-import minicraftReport from '../assets/pdfs/minicraft-slides.pdf';
 
 function Projects() {
   const navigate = useNavigate();
@@ -44,7 +43,7 @@ function Projects() {
             className={isParentMobile ? ('content-image') : expandedImage === 'portfolio' ? 'content-image-expanded' : 'content-image'}
             src={portfolio}
             alt="Portfolio"
-            style={{ marginLeft: '-20px' }}
+            style={{ marginLeft: '-20px', marginTop: '24px' }}
             onClick={() => toggleExpandedImage('portfolio')}
           />
           <div className="link-box">
@@ -56,21 +55,22 @@ function Projects() {
             </div>
           </div>
         </div>
-        <p className="content-text">This portfolio website showcases my work and interests.
-          I modeled the oscilloscope in Blender from scratch and learned a lot about topology, UV unwrapping, and texture baking.
+        <p className="content-text" style={{ marginTop: '16px' }}>This portfolio website showcases my work and interests.
+          I modelled the oscilloscope in Blender from scratch and learned a lot about topology, UV unwrapping, and texture baking.
           This website was inspired by Henry Heffernan's and Andrew Woan's portfolios. <i>LinkedIn and mail icons designed by Magnific from Flaticon.</i></p>
       </div>
     ),
     div2: (
       <div className="content-inner">
-        <h1 className="content-title">Sparky</h1>
+        <h1 className="content-title">Sparky PCB</h1>
         <div className="project-image-container">
           <Carousel key="sparky" slides={[
-            { type: 'image', src: sparky2, alt: 'Sparky' },
-            { type: 'image', src: sparky, alt: 'Sparky 2' },
+            { type: 'image', src: sparky1, alt: 'Sparky' },
+            { type: 'image', src: sparky2, alt: 'Sparky PCB' },
+            { type: 'image', src: sparky, alt: 'Sparky model' },
           ]} />
           <div className="link-box">
-            <div className="link-box-inner">
+            <div className="link-box-inner" style={{ marginTop: '10px' }}>
               <span className="project-tag">LTSpice</span>
               <span className="project-tag">Altium Designer</span>
             </div>
@@ -78,7 +78,7 @@ function Projects() {
         </div>
         <p className="content-text">Sparky is a PCB that captures ESD events (shocks) and turns on an LED via a 555 timer in monostable mode.
           Size was a major consideration in the design of the PCB, as I want Sparky to be a fridge magnet.
-          I modelled the circuit in LTSpice, modelling the shock with the standard HBM and IEC 61000-4-2 ESD models.
+          I modelled the circuit in LTSpice, modelling the shock with the HBM and IEC 61000-4-2 ESD standards, validating circuit operation from ±1kV to ±35kV.
         </p>
       </div>
     ),
@@ -105,36 +105,15 @@ function Projects() {
         <p className="content-text">
           Magic Flute is a digital implementation of a flute using an FPGA. I designed and 3D printed the flute keys which
           act as switches to generate the corresponding sound using a NIOS V processor.
-          A microphone is also used to detect if a user is blowing into the flute, and generates sound if they are.
+          A microphone is also used to detect if a user is blowing into the flute, and generates sound if they are (there is also a continuous play mode).
           My favourite song to play on the flute is Chariots of Fire.
         </p>
       </div>
     ),
     div4: (
       <div className="content-inner">
-        <h1 className="content-title">Minicraft</h1>
-        <div className="project-image-container">
-          <img className="content-image" src={minicraft} alt="Minicraft" />
-          <div className="link-box">
-            <a className="project-link" href={minicraftReport} target="_blank" rel="noopener noreferrer">
-              Take a look
-            </a>
-            <div className="link-box-inner">
-              <span className="project-tag">Verilog</span>
-              <span className="project-tag">FPGA</span>
-            </div>
-          </div>
-        </div>
-        <p className="content-text">
-          Minicraft is a project I worked on in my digital systems course. It was built with Verilog on an FPGA, using MIF-initialized ROM for tile maps to support real-time
-          map updates. I created gameplay logic including inventory management, block placement, and debugged modular components in ModelSim before integration.
-        </p>
-      </div>
-    ),
-    div5: (
-      <div className="content-inner">
         <h1 className="content-title">Tomato Block</h1>
-        <div className="project-image-container">
+        <div className="project-image-container" style={{ marginTop: '20px' }}>
           <img className={isParentMobile ? ('content-image') : expandedImage === 'tomato' ? 'content-image-expanded' : 'content-image'} 
                src={tomato} 
                alt="Tomato Block" 
@@ -151,7 +130,7 @@ function Projects() {
             </div>
           </div>
         </div>
-        <p className="content-text">
+        <p className="content-text" style={{ marginTop: '20px' }}>
           Tomato Block is an iOS app inspired by the Brick product that uses an NFC tag to block specific apps.
           I made the app with SwiftUI and designed the layout in Figma.
           I also designed and printed a tomato case for the NFC tag in Fusion360.
@@ -179,10 +158,6 @@ function Projects() {
                 <h2>Magic Flute</h2>
             </div>
             <div className="nav-container-inner" style={activeDiv === 'div4'? { backgroundColor: '#f0f0f07c' } : {} }>
-                <h2>Minicraft</h2>
-            </div>
-            <div className="nav-container-inner" style={{
-                    backgroundColor: activeDiv === 'div5' ? '#f0f0f07c' : '' }}>
                 <h2>Tomato Block</h2>
             </div>
         </div>
@@ -214,11 +189,6 @@ function Projects() {
             <button key={4}
             onClick={() => handleButtonClick('div4')}>
                 4
-            </button>
-
-            <button key={5}
-            onClick={() => handleButtonClick('div5')}>
-                5
             </button>
         </div>
         </div>

@@ -19,8 +19,8 @@ const tabContent = {
                   I love being outside and enjoy exploring new technologies to bring my personal projects to life.
                 </p>
             </div>
-            <div className="link-box" style={{ marginRight: '20px' }}>
-                <img className="content-image" src={vball} alt="Vball" />
+            <div className="link-box" style={{ marginRight: '32px' }}>
+                <img className="content-image" src={vball} alt="Vball" style={{ width: 'auto', height: '600px', marginTop: '10px' }} />
             </div>
             
         </div>
