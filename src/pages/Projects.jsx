@@ -15,6 +15,7 @@ import tomato from '../assets/content/tomato.png';
 import sparky1 from '../assets/content/sparky1.png';
 import sparky from '../assets/content/sparky2.png';
 import sparky2 from '../assets/content/sparky.png';
+import sparky_vid from '../assets/content/sparky_vid.mov';
 
 import fluteReport from '../assets/pdfs/magic-flute.pdf';
 import flutevid from '../assets/content/flutevid.mp4';
@@ -57,7 +58,7 @@ function Projects() {
         </div>
         <p className="content-text" style={{ marginTop: '16px' }}>This portfolio website showcases my work and interests.
           I modelled the oscilloscope in Blender from scratch and learned a lot about topology, UV unwrapping, and texture baking.
-          This website was inspired by Henry Heffernan's and Andrew Woan's portfolios. <i>LinkedIn and mail icons designed by Magnific from Flaticon.</i></p>
+          This website was inspired by Henry Heffernan's and Andrew Woan's portfolios. Let me know if you find any bugs! <i>LinkedIn and mail icons designed by Magnific from Flaticon.</i></p>
       </div>
     ),
     div2: (
@@ -66,6 +67,7 @@ function Projects() {
         <div className="project-image-container">
           <Carousel key="sparky" slides={[
             { type: 'image', src: sparky1, alt: 'Sparky' },
+            { type: 'video', src: sparky_vid, alt: 'Sparky Video' },
             { type: 'image', src: sparky2, alt: 'Sparky PCB' },
             { type: 'image', src: sparky, alt: 'Sparky model' },
           ]} />
@@ -77,7 +79,7 @@ function Projects() {
           </div>
         </div>
         <p className="content-text">Sparky is a PCB that captures ESD events (shocks) and turns on an LED via a 555 timer in monostable mode.
-          Size was a major consideration in the design of the PCB, as I want Sparky to be a fridge magnet.
+          Size was a major consideration in the design of the PCB, as I wanted Sparky to be a fridge magnet.
           I modelled the circuit in LTSpice, modelling the shock with the HBM and IEC 61000-4-2 ESD standards, validating circuit operation from ±1kV to ±35kV.
         </p>
       </div>
