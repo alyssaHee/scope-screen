@@ -116,15 +116,15 @@ function Projects() {
       <div className="content-inner">
         <h1 className="content-title">Tomato Block</h1>
         <div className="project-image-container" style={{ marginTop: '20px' }}>
-          <img className={isParentMobile ? ('content-image') : expandedImage === 'tomato' ? 'content-image-expanded' : 'content-image'} 
-               src={tomato} 
-               alt="Tomato Block" 
-               onClick={() => toggleExpandedImage('tomato')} 
-               style={{marginLeft: '-20px'}} />
+          <img className={isParentMobile ? ('content-image') : expandedImage === 'tomato' ? 'content-image-expanded' : 'content-image'}
+            src={tomato}
+            alt="Tomato Block"
+            onClick={() => toggleExpandedImage('tomato')}
+            style={{ marginLeft: '-20px' }} />
           <div className="link-box">
-            <a className="project-link" href="https://apps.apple.com/ca/app/tomato-block/id6751349777" target="_blank" rel="noopener noreferrer">
+            {/* <a className="project-link" href="https://apps.apple.com/ca/app/tomato-block/id6751349777" target="_blank" rel="noopener noreferrer">
               Take a look
-            </a>
+            </a> */}
             <div className="link-box-inner">
               <span className="project-tag">SwiftUI</span>
               <span className="project-tag">Figma</span>
@@ -144,24 +144,24 @@ function Projects() {
     <>
       <div className="screen-container">
         <div className="content-container">
-            {tabContent[activeDiv]}
+          {tabContent[activeDiv]}
         </div>
         <div className="nav-container">
-            <div className="nav-container-inner-logo">
-                    <img id="logo" src={logo} alt="Logo" />
-                </div>
-            <div className="nav-container-inner" style={activeDiv === 'div1'? { backgroundColor: '#f0f0f07c' } : {} }>
-                <h2>Portfolio</h2>
-            </div>
-            <div className="nav-container-inner" style={activeDiv === 'div2'? { backgroundColor: '#f0f0f07c' } : {} }>
-                <h2>Sparky</h2>  
-            </div>
-            <div className="nav-container-inner" style={activeDiv === 'div3'? { backgroundColor: '#f0f0f07c' } : {} }>
-                <h2>Magic Flute</h2>
-            </div>
-            <div className="nav-container-inner" style={activeDiv === 'div4'? { backgroundColor: '#f0f0f07c' } : {} }>
-                <h2>Tomato Block</h2>
-            </div>
+          <div className="nav-container-inner-logo">
+            <img id="logo" src={logo} alt="Logo" />
+          </div>
+          <div className="nav-container-inner" style={activeDiv === 'div1' ? { backgroundColor: '#f0f0f07c' } : {}}>
+            <h2>Portfolio</h2>
+          </div>
+          <div className="nav-container-inner" style={activeDiv === 'div2' ? { backgroundColor: '#f0f0f07c' } : {}}>
+            <h2>Sparky</h2>
+          </div>
+          <div className="nav-container-inner" style={activeDiv === 'div3' ? { backgroundColor: '#f0f0f07c' } : {}}>
+            <h2>Magic Flute</h2>
+          </div>
+          <div className="nav-container-inner" style={activeDiv === 'div4' ? { backgroundColor: '#f0f0f07c' } : {}}>
+            <h2>Tomato Block</h2>
+          </div>
         </div>
       </div>
       <div className="button-container-outer"></div>
@@ -169,34 +169,34 @@ function Projects() {
       <div className="button-container-outer">
         <div className="button-container-inner">
 
-            <button id="back-button" onClick={() => navigate(-1)}>
-                Back
-            </button>
+          <button id="back-button" onClick={() => navigate(-1)}>
+            Back
+          </button>
 
-            <button key={1}
+          <button key={1}
             onClick={() => handleButtonClick('div1')}>
-                1
-            </button>
+            1
+          </button>
 
-            <button key={2}
+          <button key={2}
             onClick={() => handleButtonClick('div2')}>
-                2
-            </button>
+            2
+          </button>
 
-            <button key={3}
+          <button key={3}
             onClick={() => handleButtonClick('div3')}>
-                3
-            </button>
+            3
+          </button>
 
-            <button key={4}
+          <button key={4}
             onClick={() => handleButtonClick('div4')}>
-                4
-            </button>
+            4
+          </button>
         </div>
-        </div>
+      </div>
     </>
 
-)
+  )
 }
 
 export default Projects
